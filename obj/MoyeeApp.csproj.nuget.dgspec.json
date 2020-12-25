@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\MoyeeApp\\MoyeeApp.csproj": {}
+    "C:\\Users\\Acer\\Documents\\GitHub\\MoyeeApp\\MoyeeApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\MoyeeApp\\MoyeeApp.csproj": {
+    "C:\\Users\\Acer\\Documents\\GitHub\\MoyeeApp\\MoyeeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\MoyeeApp\\MoyeeApp.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Documents\\GitHub\\MoyeeApp\\MoyeeApp.csproj",
         "projectName": "MoyeeApp",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\MoyeeApp\\MoyeeApp.csproj",
+        "projectPath": "C:\\Users\\Acer\\Documents\\GitHub\\MoyeeApp\\MoyeeApp.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\MoyeeApp\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Documents\\GitHub\\MoyeeApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -47,6 +47,7 @@ namespace MoyeeApp
             // 
             this.txtSifre.Location = new System.Drawing.Point(214, 144);
             this.txtSifre.Name = "txtSifre";
+            this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(178, 23);
             this.txtSifre.TabIndex = 1;
             // 
@@ -102,7 +103,6 @@ namespace MoyeeApp
         #endregion
 
         private System.Windows.Forms.TextBox txtKullaniciAdi;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button giris;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -47,7 +47,7 @@ namespace MoyeeApp
                 if (grs.girisDurumu == bilgiTut)
                 {
                     anaEkran.Show();
-
+                    this.Hide();
                 }
 
             }

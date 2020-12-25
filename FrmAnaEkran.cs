@@ -43,14 +43,7 @@ namespace MoyeeApp
         }
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton2.Checked == true)
-            {
-                AnaEkran anaEkran = new AnaEkran();
-                dataGridView1.DataSource = anaEkran.rapor2_Listele();
-                anaEkran.rapor1 = "";
-                anaEkran.rapor2 = "*****";
-                anaEkran.rapor3 = "";
-            }
+
         }
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
@@ -60,7 +53,7 @@ namespace MoyeeApp
                 dataGridView1.DataSource = anaEkran.rapor3_Listele();
                 anaEkran.rapor1 = "";
                 anaEkran.rapor2 = "";
-                anaEkran.rapor3 = "*****";
+                anaEkran.rapor3 = "Personeller";
             }
         }
         private void btnAra_Click(object sender, EventArgs e)
@@ -81,6 +74,31 @@ namespace MoyeeApp
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (radioButton2.Checked == true)
+            {
+                AnaEkran anaEkran = new AnaEkran();
+                dataGridView1.DataSource = anaEkran.rapor2_Listele();
+                anaEkran.rapor1 = "";
+                anaEkran.rapor2 = "Personeller";
+                anaEkran.rapor3 = "";
+            }
+        }
     }
 }

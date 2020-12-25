@@ -23,7 +23,7 @@ namespace MoyeeApp
             try
             {
                 db.baglanti.Open();
-                SqlCommand personellerAl = new SqlCommand("select * from Personeller", db.baglanti);
+                SqlCommand personellerAl = new SqlCommand("SELECT * FROM Personeller", db.baglanti);
                 SqlDataAdapter adaptor = new SqlDataAdapter(personellerAl);
                 DataTable tablo = new DataTable();
                 adaptor.Fill(tablo);
@@ -44,8 +44,8 @@ namespace MoyeeApp
             try
             {
                 db.baglanti.Open();
-                SqlCommand odaAl = new SqlCommand("select * from oda", db.baglanti);
-                SqlDataAdapter adaptor = new SqlDataAdapter(odaAl);
+                SqlCommand personelAl = new SqlCommand("SELECT ad,soyad,Pozisyonlar.pozisyon,iseGirisTarihi,dogumTarihi,cinsiyet,maas FROM Personeller full join Pozisyonlar on Pozisyonlar.pozisyonID=Personeller.pozisyonID WHERE maas>=4000", db.baglanti);
+                SqlDataAdapter adaptor = new SqlDataAdapter(personelAl);
                 DataTable tablo = new DataTable();
                 adaptor.Fill(tablo);
                 return tablo;
@@ -78,7 +78,7 @@ namespace MoyeeApp
                 db.baglanti.Close();
             }
         }
-        public DataTable veriGetirRapor1(string personelAdi)
+        public DataTable veriGetirRapor1(string ad)
         {
             if (db.baglanti.State == ConnectionState.Open)
             {
@@ -87,8 +87,8 @@ namespace MoyeeApp
             try
             {
                 db.baglanti.Open();
-                SqlCommand getir = new SqlCommand("select * from mutfak where adi LIKE '%'+@ad+'%'", db.baglanti);
-                getir.Parameters.AddWithValue("@ad", personelAdi);
+                SqlCommand getir = new SqlCommand("select * from Personeller where ad LIKE '%'+@ad+'%'", db.baglanti);
+                getir.Parameters.AddWithValue("@ad", ad);
                 SqlDataAdapter adaptor = new SqlDataAdapter(getir);
                 DataTable tablo = new DataTable();
                 adaptor.Fill(tablo);

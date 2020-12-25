@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N9paEYAIwh7ijyw0HfAltoDUi0vtwgSrwHSwsKc00DrRB8VBZbjeNyo/pB2N9Qw7Kw/mhMGDUAuiM7NLZW0Kzw==",
+  "dgSpecHash": "nehTiWO0xEkBg4oppGDZ0zFNE0ACW7b+F2tkCtSOANUz+Sl5M1pe2XYMTMYW31q6yL4UpQu/bOaQcszK979gVg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\Desktop\\MoyeeApp\\MoyeeApp.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\Documents\\GitHub\\MoyeeApp\\MoyeeApp.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
