@@ -23,7 +23,7 @@ namespace MoyeeApp
             try
             {
                 db.baglanti.Open();
-                SqlCommand personellerAl = new SqlCommand("SELECT * FROM Personeller", db.baglanti);
+                SqlCommand personellerAl = new SqlCommand("SELECT registryID, ad, soyad, kimlikNo, iletisimID, CalismaDurumu.calismaDurumu, PersonelGrubu.personelGrubu, Departmanlar.departman, Pozisyonlar.pozisyon, Unvanlar.unvan, bagliOlduguMudur, bagliOlduguDirektor, bagliOlduguCeo, iseGirisTarihi, dogumTarihi, cinsiyet, maas FROM Personeller left join Pozisyonlar on Pozisyonlar.pozisyonID=Personeller.pozisyonID left join Departmanlar on Departmanlar.departmanID=Personeller.departmanID left join Unvanlar on Unvanlar.unvanID=Personeller.unvanID left join CalismaDurumu on CalismaDurumu.calismaDurumuID=Personeller.calismaDurumuID left join PersonelGrubu on PersonelGrubu.personelGrubuID=Personeller.personelGrubuID", db.baglanti);
                 SqlDataAdapter adaptor = new SqlDataAdapter(personellerAl);
                 DataTable tablo = new DataTable();
                 adaptor.Fill(tablo);
@@ -100,7 +100,7 @@ namespace MoyeeApp
                 db.baglanti.Close();
             }
         }
-        public DataTable veriGetirRapor2(string urunAdi)
+        public DataTable veriGetirRapor2(string ad)
         {
             if (db.baglanti.State == ConnectionState.Open)
             {
@@ -109,8 +109,8 @@ namespace MoyeeApp
             try
             {
                 db.baglanti.Open();
-                SqlCommand getir = new SqlCommand("select * from oda where personelAdi  LIKE '%'+@ad+'%'", db.baglanti);
-                getir.Parameters.AddWithValue("@ad", urunAdi);
+                SqlCommand getir = new SqlCommand("select * from Personeller where ad  LIKE '%'+@ad+'%'", db.baglanti);
+                getir.Parameters.AddWithValue("@ad", ad);
                 SqlDataAdapter adaptor = new SqlDataAdapter(getir);
                 DataTable tablo = new DataTable();
                 adaptor.Fill(tablo);
@@ -122,7 +122,7 @@ namespace MoyeeApp
                 db.baglanti.Close();
             }
         }
-        public DataTable veriGetirRapor3(string urunAdi)
+        public DataTable veriGetirRapor3(string ad)
         {
             if (db.baglanti.State == ConnectionState.Open)
             {
@@ -131,8 +131,8 @@ namespace MoyeeApp
             try
             {
                 db.baglanti.Open();
-                SqlCommand getir = new SqlCommand("select * from oda where personelAdi  LIKE '%'+@ad+'%'", db.baglanti);
-                getir.Parameters.AddWithValue("@ad", urunAdi);
+                SqlCommand getir = new SqlCommand("select * from Personeller where ad  LIKE '%'+@ad+'%'", db.baglanti);
+                getir.Parameters.AddWithValue("@ad", ad);
                 SqlDataAdapter adaptor = new SqlDataAdapter(getir);
                 DataTable tablo = new DataTable();
                 adaptor.Fill(tablo);

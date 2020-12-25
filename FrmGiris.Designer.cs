@@ -94,7 +94,7 @@ namespace MoyeeApp
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtKullaniciAdi);
             this.Name = "FrmGiris";
-            this.Text = "Parola :";
+            this.Text = "Moyee Database System - Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -58,6 +58,17 @@ namespace MoyeeApp
         }
         private void btnAra_Click(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             AnaEkran anaEkran = new AnaEkran();
             if (radioButton1.Checked == true)
             {
@@ -71,17 +82,6 @@ namespace MoyeeApp
             {
                 dataGridView1.DataSource = anaEkran.veriGetirRapor3(txtAra.Text);
             }
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtAra_TextChanged(object sender, EventArgs e)
