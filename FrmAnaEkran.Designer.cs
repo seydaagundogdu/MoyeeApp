@@ -142,6 +142,7 @@ namespace MoyeeApp
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Operasyon personelleri (yaşa göre)";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged_1);
             // 
             // radioButton4
             // 

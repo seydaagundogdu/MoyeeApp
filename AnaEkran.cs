@@ -66,7 +66,7 @@ namespace MoyeeApp
             try
             {
                 db.baglanti.Open();
-                SqlCommand personellerAl = new SqlCommand("select * from Personeller", db.baglanti);
+                SqlCommand personellerAl = new SqlCommand("SELECT ad, soyad, Musteriler.musteri, Departmanlar.departman, Pozisyonlar.pozisyon, Unvanlar.unvan, dogumTarihi, cinsiyet FROM Operasyon left join Personeller on Operasyon.registryID = Personeller.registryID left join Departmanlar on Departmanlar.departmanID = Personeller.departmanID left join Pozisyonlar on Pozisyonlar.pozisyonID = Personeller.pozisyonID left join Unvanlar on Unvanlar.unvanID = Personeller.unvanID full join Musteriler on Musteriler.musteriID = Operasyon.musteriID", db.baglanti);
                 SqlDataAdapter adaptor = new SqlDataAdapter(personellerAl);
                 DataTable tablo = new DataTable();
                 adaptor.Fill(tablo);
